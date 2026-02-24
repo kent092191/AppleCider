@@ -59,13 +59,13 @@
     <!-- Contact Section -->
     <section class="section-padding">
         <div class="container">
-            <div class="contact-grid">
+                    <div class="contact-card">
                 <!-- Contact Information -->
                 <div>
-                    <h2 style="margin-bottom: 24px;">Contact Information</h2>
-                    <p style="color: var(--text-medium); margin-bottom: 32px;">
+                    <h2 class="contact-heading">Contact Information</h2>
+                    <p class="contact-sub">
                         Have questions about our products or need assistance with your order? We're here to help!
-                    </p>
+                            <p><a href="https://www.facebook.com/profile.php?id=100064211281084" target="_blank" rel="noopener noreferrer">Facebook Page</a><br>Message us anytime</p>
 
                     <div class="contact-info-cards">
                         <div class="contact-card">
@@ -104,14 +104,14 @@
                             </div>
                             <div>
                                 <h4>Social Media</h4>
-                                <p><a href="https://www.facebook.com/profile.php?id=100064211281084" target="_blank">Facebook Page</a><br>Message us anytime</p>
+                                <p><a href="https://www.facebook.com/profile.php?id=100064211281084" target="_blank" rel="noopener noreferrer">Facebook Page</a><br>Message us anytime</p>
                             </div>
                         </div>
                     </div>
 
-                    <div style="margin-top: 32px; padding: 24px; background: var(--bg-light); border-radius: var(--radius);">
-                        <h4 style="margin-bottom: 12px;">Business Hours</h4>
-                        <p style="color: var(--text-medium); font-size: 0.9rem; line-height: 1.8;">
+                    <div class="card-panel">
+                        <h4>Business Hours</h4>
+                        <p>
                             <strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM<br>
                             <strong>Saturday:</strong> 9:00 AM - 5:00 PM<br>
                             <strong>Sunday:</strong> Closed
@@ -121,16 +121,16 @@
 
                 <!-- Contact Form -->
                 <div class="contact-form">
-                    <h3 style="margin-bottom: 24px;">Send Us a Message</h3>
+                    <h3 class="contact-heading">Send Us a Message</h3>
                     <form id="contactForm" onsubmit="handleContactForm(event)">
                         <div class="form-group">
-                            <label>Your Name <span style="color: #e74c3c;">*</span></label>
-                            <input type="text" id="contactName" required>
+                            <label for="contactName">Your Name <span class="required-mark">*</span></label>
+                            <input type="text" id="contactName" name="contactName" placeholder="Your full name" required>
                         </div>
 
                         <div class="form-group">
-                            <label>Email Address <span style="color: #e74c3c;">*</span></label>
-                            <input type="email" id="contactEmail" required>
+                            <label for="contactEmail">Email Address <span class="required-mark">*</span></label>
+                            <input type="email" id="contactEmail" name="contactEmail" placeholder="you@example.com" required>
                         </div>
 
                         <div class="form-group">
@@ -139,8 +139,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Subject <span style="color: #e74c3c;">*</span></label>
-                            <select id="contactSubject" required>
+                            <label for="contactSubject">Subject <span class="required-mark">*</span></label>
+                            <select id="contactSubject" name="contactSubject" required>
                                 <option value="">Select a subject</option>
                                 <option value="product">Product Inquiry</option>
                                 <option value="order">Order Status</option>
@@ -153,11 +153,11 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Message <span style="color: #e74c3c;">*</span></label>
-                            <textarea id="contactMessage" rows="6" required placeholder="Tell us how we can help you..."></textarea>
+                            <label for="contactMessage">Message <span class="required-mark">*</span></label>
+                            <textarea id="contactMessage" name="contactMessage" rows="6" required placeholder="Tell us how we can help you..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                        <button type="submit" class="btn btn-primary btn-lg btn-fullwidth">
                             <i class="fas fa-paper-plane"></i>
                             Send Message
                         </button>
@@ -168,7 +168,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="section-padding" style="background: var(--bg-light);">
+    <section class="section-padding faq-section">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">FAQs</span>
@@ -176,35 +176,35 @@
                 <p>Quick answers to common questions</p>
             </div>
 
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div style="background: var(--bg-white); padding: 24px; border-radius: var(--radius); margin-bottom: 16px; border-left: 4px solid var(--primary);">
-                    <h4 style="margin-bottom: 8px;">How do I place an order?</h4>
-                    <p style="color: var(--text-medium); font-size: 0.9rem;">Simply browse our products, add items to your cart, and proceed to checkout. We accept COD, GCash, and bank transfer payments.</p>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h4 class="faq-title">How do I place an order?</h4>
+                    <p class="faq-text">Simply browse our products, add items to your cart, and proceed to checkout. We accept COD, GCash, and bank transfer payments.</p>
                 </div>
 
-                <div style="background: var(--bg-white); padding: 24px; border-radius: var(--radius); margin-bottom: 16px; border-left: 4px solid var(--primary);">
-                    <h4 style="margin-bottom: 8px;">Do you offer free shipping?</h4>
-                    <p style="color: var(--text-medium); font-size: 0.9rem;">Yes! We offer free standard shipping on all orders over ₱1,500. Orders below this amount have a flat shipping fee.</p>
+                <div class="faq-item">
+                    <h4 class="faq-title">Do you offer free shipping?</h4>
+                    <p class="faq-text">Yes! We offer free standard shipping on all orders over ₱1,500. Orders below this amount have a flat shipping fee.</p>
                 </div>
 
-                <div style="background: var(--bg-white); padding: 24px; border-radius: var(--radius); margin-bottom: 16px; border-left: 4px solid var(--primary);">
-                    <h4 style="margin-bottom: 8px;">How long does delivery take?</h4>
-                    <p style="color: var(--text-medium); font-size: 0.9rem;">Standard delivery takes 3-5 business days, while express delivery takes 1-2 business days. Delivery times may vary depending on your location.</p>
+                <div class="faq-item">
+                    <h4 class="faq-title">How long does delivery take?</h4>
+                    <p class="faq-text">Standard delivery takes 3-5 business days, while express delivery takes 1-2 business days. Delivery times may vary depending on your location.</p>
                 </div>
 
-                <div style="background: var(--bg-white); padding: 24px; border-radius: var(--radius); margin-bottom: 16px; border-left: 4px solid var(--primary);">
-                    <h4 style="margin-bottom: 8px;">Are your products FDA approved?</h4>
-                    <p style="color: var(--text-medium); font-size: 0.9rem;">Yes! All our products are FDA-approved and manufactured following strict quality control standards to ensure safety and efficacy.</p>
+                <div class="faq-item">
+                    <h4 class="faq-title">Are your products FDA approved?</h4>
+                    <p class="faq-text">Yes! All our products are FDA-approved and manufactured following strict quality control standards to ensure safety and efficacy.</p>
                 </div>
 
-                <div style="background: var(--bg-white); padding: 24px; border-radius: var(--radius); margin-bottom: 16px; border-left: 4px solid var(--primary);">
-                    <h4 style="margin-bottom: 8px;">What is your return policy?</h4>
-                    <p style="color: var(--text-medium); font-size: 0.9rem;">We offer a 30-day money-back guarantee. If you're not satisfied with your purchase, contact us for a hassle-free return or exchange.</p>
+                <div class="faq-item">
+                    <h4 class="faq-title">What is your return policy?</h4>
+                    <p class="faq-text">We offer a 30-day money-back guarantee. If you're not satisfied with your purchase, contact us for a hassle-free return or exchange.</p>
                 </div>
 
-                <div style="background: var(--bg-white); padding: 24px; border-radius: var(--radius); border-left: 4px solid var(--primary);">
-                    <h4 style="margin-bottom: 8px;">Can I track my order?</h4>
-                    <p style="color: var(--text-medium); font-size: 0.9rem;">Yes! Once your order ships, we'll send you a tracking number via email or SMS so you can monitor your delivery.</p>
+                <div class="faq-item">
+                    <h4 class="faq-title">Can I track my order?</h4>
+                    <p class="faq-text">Yes! Once your order ships, we'll send you a tracking number via email or SMS so you can monitor your delivery.</p>
                 </div>
             </div>
         </div>
@@ -221,10 +221,10 @@
                     </div>
                     <p>Your trusted source for premium Filipino herbal health products.</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/profile.php?id=100064211281084" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a class="social-link" href="https://www.facebook.com/profile.php?id=100064211281084" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="social-link" href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a class="social-link" href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="social-link" href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
 
@@ -270,7 +270,7 @@
     </footer>
 
     <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop">
+    <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
 

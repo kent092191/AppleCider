@@ -37,29 +37,29 @@
                     <!-- Populated by JavaScript -->
                 </div>
 
-                <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius); margin-bottom: 32px; text-align: left;">
-                    <h3 style="margin-bottom: 16px; font-size: 1.1rem;">What happens next?</h3>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="padding: 8px 0; padding-left: 32px; position: relative;">
-                            <i class="fas fa-envelope" style="position: absolute; left: 0; color: var(--primary);"></i>
+                <div class="order-next-steps">
+                    <h3 class="order-next-title">What happens next?</h3>
+                    <ul class="timeline-list">
+                        <li class="timeline-item">
+                            <i class="fas fa-envelope timeline-icon"></i>
                             <strong>Order Confirmation:</strong> Check your email for order details
                         </li>
-                        <li style="padding: 8px 0; padding-left: 32px; position: relative;">
-                            <i class="fas fa-box" style="position: absolute; left: 0; color: var(--primary);"></i>
+                        <li class="timeline-item">
+                            <i class="fas fa-box timeline-icon"></i>
                             <strong>Processing:</strong> We'll prepare your items for shipment
                         </li>
-                        <li style="padding: 8px 0; padding-left: 32px; position: relative;">
-                            <i class="fas fa-truck" style="position: absolute; left: 0; color: var(--primary);"></i>
+                        <li class="timeline-item">
+                            <i class="fas fa-truck timeline-icon"></i>
                             <strong>Shipping:</strong> You'll receive tracking information via SMS/email
                         </li>
-                        <li style="padding: 8px 0; padding-left: 32px; position: relative;">
-                            <i class="fas fa-home" style="position: absolute; left: 0; color: var(--primary);"></i>
+                        <li class="timeline-item">
+                            <i class="fas fa-home timeline-icon"></i>
                             <strong>Delivery:</strong> Your order will arrive within 3-5 business days
                         </li>
                     </ul>
                 </div>
 
-                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <div class="action-row">
                     <a href="index.html" class="btn btn-primary btn-lg">
                         <i class="fas fa-home"></i>
                         Back to Home
@@ -70,10 +70,10 @@
                     </a>
                 </div>
 
-                <div style="margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--border);">
-                    <p style="color: var(--text-medium); font-size: 0.9rem;">
-                        Need help? Contact us at <a href="mailto:info@doublem.ph" style="color: var(--primary); font-weight: 600;">info@doublem.ph</a> 
-                        or call <a href="tel:+639123456789" style="color: var(--primary); font-weight: 600;">+63 912 345 6789</a>
+                <div class="order-followup">
+                    <p>
+                        Need help? Contact us at <a class="contact-link" href="mailto:info@doublem.ph">info@doublem.ph</a>
+                        or call <a class="contact-link" href="tel:+639123456789">+63 912 345 6789</a>
                     </p>
                 </div>
             </div>
@@ -83,7 +83,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-bottom" style="padding: 24px 0; border-top: none;">
+            <div class="footer-bottom footer-bottom-minimal">
                 <p>&copy; 2026 Double M Merchandise. All rights reserved.</p>
                 <div class="footer-payments">
                     <span>We Accept:</span>
@@ -126,7 +126,7 @@
                     </div>
                     <div class="detail-row">
                         <span><strong>Total Amount:</strong></span>
-                        <span style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">₱${lastOrder.total.toLocaleString()}</span>
+                        <span class="order-total-amount">₱${lastOrder.total.toLocaleString()}</span>
                     </div>
                 `;
             } else {
