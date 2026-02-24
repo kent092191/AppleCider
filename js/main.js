@@ -416,10 +416,10 @@ if (searchInput) {
         }
 
         const products = [
-            { id: 'apple-cider', name: 'Apple Cider with Herbs', price: 350, icon: '<img src="images/apple-cider.png" alt="Apple Cider" class="search-product-img">' },
-            { id: 'sambong', name: 'Sambong Capsules', price: 280, icon: '💊' },
-            { id: 'lagundi', name: 'Lagundi Leaves Capsules', price: 295, icon: '🌿' },
-            { id: 'paragis', name: 'Paragis Capsules', price: 270, icon: '🌾' }
+            { id: 'apple-cider', name: 'Apple Cider with Herbs', price: 999, icon: '<img src="images/apple-cider.png" alt="Apple Cider" class="search-product-img">' },
+            { id: 'sambong', name: 'Sambong Capsules', price: 400, icon: '💊' },
+            { id: 'lagundi', name: 'Lagundi Leaves Capsules', price: 370, icon: '🌿' },
+            { id: 'paragis', name: 'Paragis Capsules', price: 380, icon: '🌾' }
         ];
 
         const results = products.filter(p => p.name.toLowerCase().includes(query));
