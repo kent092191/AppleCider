@@ -14,7 +14,7 @@ Based in **Cordon, Isabela, Philippines**
 - **Order Confirmation** - Success page with order details
 
 ### Product Offerings
-1. **Apple Cider with Herbs** (₱999) - Premium apple cider vinegar infused with traditional Filipino herbs
+1. **Apple Cider with Herbs** (₱999) - Premium apple cider infused with traditional Filipino herbs
 2. **Sambong Capsules** (₱400) - Natural kidney and urinary tract support
 3. **Lagundi Leaves Capsules** (₱370) - Traditional remedy for respiratory health
 4. **Paragis Capsules** (₱380) - Natural antioxidant and wellness support
