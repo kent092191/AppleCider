@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Product Image - Instructions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2d6a4f;
+            margin-top: 0;
+        }
+        .step {
+            background: #f0f7f4;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #2d6a4f;
+            border-radius: 4px;
+        }
+        .step h3 {
+            margin-top: 0;
+            color: #2d6a4f;
+        }
+        .filename {
+            background: #1b4332;
+            color: #d4a843;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .success {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .btn {
+            background: #2d6a4f;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 5px;
+        }
+        .btn:hover {
+            background: #1b4332;
+        }
+        code {
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🖼️ Save Product Image - Instructions</h1>
+        
+        <div class="warning">
+            <strong>⚠️ Image Not Found!</strong><br>
+            The website is looking for the Apple Cider product image but can't find it yet.
+        </div>
+
+        <h2>Quick Steps to Fix:</h2>
+
+        <div class="step">
+            <h3>Step 1: Right-click the Apple Cider bottle image</h3>
+            <p>In your chat conversation, you'll see the ANJUBI Apple Cider Gold bottle image. <strong>Right-click</strong> on it.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 2: Select "Save Image As..." or "Save Picture As..."</h3>
+            <p>A save dialog will appear.</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 3: Navigate to the images folder</h3>
+            <p>Browse to: <code>d:\Health and Welness Website\images\</code></p>
+        </div>
+
+        <div class="step">
+            <h3>Step 4: Save with EXACT filename</h3>
+            <p>Type this filename exactly (case-sensitive):</p>
+            <div class="filename">apple-cider.jpg</div>
+            <p><strong>Important:</strong> Must be all lowercase, no spaces!</p>
+        </div>
+
+        <div class="step">
+            <h3>Step 5: Refresh the website</h3>
+            <p>Press <code>F5</code> or <code>Ctrl+R</code> to reload the page and see the images!</p>
+        </div>
+
+        <div class="success">
+            <strong>✅ After saving:</strong><br>
+            All product images throughout the website will automatically display the real ANJUBI Apple Cider Gold bottle!
+        </div>
+
+        <h2>Alternative Method (PowerShell):</h2>
+        <div class="step">
+            <h3>If you have the image file saved anywhere on your computer:</h3>
+            <ol>
+                <li>Open PowerShell in the website folder</li>
+                <li>Run: <code>Copy-Item "path\to\your\image.jpg" "images\apple-cider.jpg"</code></li>
+                <li>Replace <code>path\to\your\image.jpg</code> with your actual file location</li>
+            </ol>
+        </div>
+
+        <br>
+        <a href="index.html" class="btn">🏠 Back to Website</a>
+        <a href="images/" class="btn">📁 Open Images Folder</a>
+    </div>
+</body>
+</html>

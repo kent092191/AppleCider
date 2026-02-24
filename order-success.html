@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order confirmation - Thank you for your purchase!">
+    <title>Order Confirmed - Double M Merchandise</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🌿</div>
+                <span>Double M</span> Merchandise
+            </a>
+        </div>
+    </header>
+
+    <!-- Order Success -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="order-success">
+                <div class="success-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h2>Order Placed Successfully!</h2>
+                <p>Thank you for your purchase. We've received your order and will process it shortly.</p>
+                
+                <div class="order-details-box" id="orderDetails">
+                    <!-- Populated by JavaScript -->
+                </div>
+
+                <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius); margin-bottom: 32px; text-align: left;">
+                    <h3 style="margin-bottom: 16px; font-size: 1.1rem;">What happens next?</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 8px 0; padding-left: 32px; position: relative;">
+                            <i class="fas fa-envelope" style="position: absolute; left: 0; color: var(--primary);"></i>
+                            <strong>Order Confirmation:</strong> Check your email for order details
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 32px; position: relative;">
+                            <i class="fas fa-box" style="position: absolute; left: 0; color: var(--primary);"></i>
+                            <strong>Processing:</strong> We'll prepare your items for shipment
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 32px; position: relative;">
+                            <i class="fas fa-truck" style="position: absolute; left: 0; color: var(--primary);"></i>
+                            <strong>Shipping:</strong> You'll receive tracking information via SMS/email
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 32px; position: relative;">
+                            <i class="fas fa-home" style="position: absolute; left: 0; color: var(--primary);"></i>
+                            <strong>Delivery:</strong> Your order will arrive within 3-5 business days
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-home"></i>
+                        Back to Home
+                    </a>
+                    <a href="products.html" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-shopping-bag"></i>
+                        Continue Shopping
+                    </a>
+                </div>
+
+                <div style="margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--border);">
+                    <p style="color: var(--text-medium); font-size: 0.9rem;">
+                        Need help? Contact us at <a href="mailto:info@doublem.ph" style="color: var(--primary); font-weight: 600;">info@doublem.ph</a> 
+                        or call <a href="tel:+639123456789" style="color: var(--primary); font-weight: 600;">+63 912 345 6789</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="padding: 24px 0; border-top: none;">
+                <p>&copy; 2026 Double M Merchandise. All rights reserved.</p>
+                <div class="footer-payments">
+                    <span>We Accept:</span>
+                    <span class="payment-icon">GCASH</span>
+                    <span class="payment-icon">COD</span>
+                    <span class="payment-icon">Bank Transfer</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Display order details
+        document.addEventListener('DOMContentLoaded', () => {
+            const lastOrder = JSON.parse(localStorage.getItem('lastOrder'));
+            const orderDetailsEl = document.getElementById('orderDetails');
+
+            if (lastOrder && orderDetailsEl) {
+                orderDetailsEl.innerHTML = `
+                    <div class="detail-row">
+                        <span><strong>Order Number:</strong></span>
+                        <span>${lastOrder.orderNumber}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span><strong>Order Date:</strong></span>
+                        <span>${new Date(lastOrder.orderDate).toLocaleDateString('en-PH', { 
+                            year: 'numeric', 
+                            month: 'long', 
+                            day: 'numeric' 
+                        })}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span><strong>Payment Method:</strong></span>
+                        <span>${lastOrder.payment.toUpperCase()}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span><strong>Delivery Method:</strong></span>
+                        <span>${lastOrder.delivery === 'express' ? 'Express (1-2 days)' : 'Standard (3-5 days)'}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span><strong>Total Amount:</strong></span>
+                        <span style="font-size: 1.2rem; font-weight: 700; color: var(--primary);">₱${lastOrder.total.toLocaleString()}</span>
+                    </div>
+                `;
+            } else {
+                orderDetailsEl.innerHTML = `
+                    <div class="detail-row">
+                        <span><strong>Order Number:</strong></span>
+                        <span>DM${Date.now()}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span><strong>Status:</strong></span>
+                        <span>Processing</span>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apple Cider with Herbs - Premium apple cider vinegar infused with traditional Filipino herbs for digestive health, immune support, and natural wellness">
+    <title>Apple Cider with Herbs - Double M Merchandise</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        🎉 Free shipping on orders over ₱1,500 | Use code <a href="#" onclick="applyCoupon('WELCOME10'); return false;">WELCOME10</a> for 10% off your first order
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🌿</div>
+                <span>Double M</span> Merchandise
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="nav-icon-btn" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <a href="cart.html" class="nav-icon-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="products.html">Products</a>
+            <span>/</span>
+            <span>Apple Cider with Herbs</span>
+        </div>
+    </div>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-grid">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="images/apple-cider.png" alt="ANJUBI Apple Cider Gold - 750ml Premium Filipino Herbal Health Product" class="product-img">
+                    </div>
+                    <div class="product-thumbnails">
+                        <div class="product-thumb active">
+                            <img src="images/apple-cider.png" alt="Apple Cider" class="thumb-img">
+                        </div>
+                        <div class="product-thumb">
+                            <div class="product-placeholder">
+                                <div class="placeholder-icon">🌿</div>
+                            </div>
+                        </div>
+                        <div class="product-thumb">
+                            <div class="product-placeholder">
+                                <div class="placeholder-icon">💊</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-detail-info">
+                    <div class="product-badge bestseller product-detail-badge">Bestseller</div>
+                    <h1>Apple Cider with Herbs</h1>
+                    
+                    <div class="product-detail-rating">
+                        <div class="stars product-rating-display">★★★★★</div>
+                        <span class="color-medium">(2,458 reviews)</span>
+                    </div>
+
+                    <div class="product-detail-price">₱350</div>
+
+                    <p class="product-short-desc">
+                        Premium apple cider vinegar infused with traditional Filipino herbs. Supports healthy digestion, boosts immune system, aids in natural detoxification, and promotes overall wellness. Made with 100% natural ingredients.
+                    </p>
+
+                    <div class="product-meta-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span><strong>In Stock</strong> - Ships within 1-2 business days</span>
+                    </div>
+
+                    <div class="product-meta-item">
+                        <i class="fas fa-bottle-water"></i>
+                        <span><strong>Size:</strong> 500ml per bottle</span>
+                    </div>
+
+                    <div class="product-meta-item">
+                        <i class="fas fa-certificate"></i>
+                        <span><strong>FDA Approved</strong> - Safe and certified</span>
+                    </div>
+
+                    <div class="product-meta-item">
+                        <i class="fas fa-leaf"></i>
+                        <span><strong>100% Natural</strong> - No artificial additives</span>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <button class="qty-btn" onclick="decreaseQty()" title="Decrease quantity" aria-label="Decrease quantity">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <input type="number" id="quantity" class="qty-input" value="1" min="1" max="99" readonly aria-label="Quantity">
+                        <button class="qty-btn" onclick="increaseQty()" title="Increase quantity" aria-label="Increase quantity">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+
+                    <div class="detail-actions">
+                        <button class="btn btn-primary btn-lg" onclick="addToCartFromDetail()">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                        <button class="btn btn-secondary btn-lg" onclick="buyNow()">
+                            <i class="fas fa-bolt"></i>
+                            Buy Now
+                        </button>
+                    </div>
+
+                    <div class="product-meta-item product-meta-share">
+                        <i class="fas fa-share-alt"></i>
+                        <span>Share: 
+                            <a href="#" class="social-share-link" title="Share on Facebook" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-share-link" title="Share on Twitter" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-share-link" title="Share on WhatsApp" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <div class="tab-headers">
+                    <button class="tab-header active" onclick="switchTab(event, 'description')">Description</button>
+                    <button class="tab-header" onclick="switchTab(event, 'benefits')">Benefits</button>
+                    <button class="tab-header" onclick="switchTab(event, 'ingredients')">Ingredients</button>
+                    <button class="tab-header" onclick="switchTab(event, 'usage')">How to Use</button>
+                    <button class="tab-header" onclick="switchTab(event, 'reviews')">Reviews (2,458)</button>
+                </div>
+
+                <div id="description" class="tab-content active">
+                    <h3>Product Description</h3>
+                    <p>
+                        Our Apple Cider with Herbs is a premium wellness solution that combines the time-tested benefits of apple cider vinegar with carefully selected traditional Filipino herbs. This powerful blend supports your body's natural functions and promotes overall health.
+                    </p>
+                    <p>
+                        Made from fermented apples and infused with natural herbs, our formula is designed to support digestive health, boost immunity, aid in detoxification, and help maintain a healthy metabolism. Each bottle is crafted with care using only the finest natural ingredients, with no artificial preservatives, colors, or flavors.
+                    </p>
+                    <p>
+                        Manufactured in FDA-approved facilities following strict quality control standards, our Apple Cider with Herbs represents the perfect harmony between traditional wisdom and modern wellness science.
+                    </p>
+                </div>
+
+                <div id="benefits" class="tab-content">
+                    <h3>Health Benefits</h3>
+                    <ul>
+                        <li>Supports healthy digestion and gut health</li>
+                        <li>Boosts immune system function</li>
+                        <li>Aids in natural detoxification processes</li>
+                        <li>Helps maintain healthy blood sugar levels</li>
+                        <li>Supports weight management efforts</li>
+                        <li>Promotes cardiovascular health</li>
+                        <li>Rich in antioxidants and nutrients</li>
+                        <li>Supports healthy skin from within</li>
+                        <li>Helps balance body pH levels</li>
+                        <li>Increases energy and vitality</li>
+                    </ul>
+                </div>
+
+                <div id="ingredients" class="tab-content">
+                    <h3>Natural Ingredients</h3>
+                    <ul>
+                        <li><strong>Apple Cider Vinegar</strong> - Fermented from premium apples, rich in acetic acid and beneficial enzymes</li>
+                        <li><strong>Traditional Filipino Herbs</strong> - Carefully selected blend of natural herbs for enhanced wellness</li>
+                        <li><strong>Natural Honey</strong> - For taste and additional health benefits</li>
+                        <li><strong>Purified Water</strong> - Ensuring purity and quality</li>
+                    </ul>
+                    <p class="mt-16"><strong>No artificial preservatives, colors, or flavors</strong></p>
+                </div>
+
+                <div id="usage" class="tab-content">
+                    <h3>How to Use</h3>
+                    <p><strong>Recommended Dosage:</strong></p>
+                    <ul>
+                        <li>Adults: Mix 1-2 tablespoons in a glass of water</li>
+                        <li>Take 1-2 times daily, preferably before meals</li>
+                        <li>Can be mixed with honey or fruit juice for better taste</li>
+                        <li>For best results, use consistently as part of your daily routine</li>
+                    </ul>
+                    <p class="mt-16"><strong>Important Notes:</strong></p>
+                    <ul>
+                        <li>Shake well before use</li>
+                        <li>Keep refrigerated after opening</li>
+                        <li>Consult your healthcare provider if pregnant, nursing, or taking medications</li>
+                        <li>Not intended to diagnose, treat, cure, or prevent any disease</li>
+                    </ul>
+                </div>
+
+                <div id="reviews" class="tab-content">
+                    <h3 class="mb-24">Customer Reviews</h3>
+                    
+                    <div class="testimonial-card testimonial-spacing">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"This Apple Cider has been amazing for my digestion! I've been using it for 3 months now and feel so much better. Highly recommend!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">M</div>
+                            <div>
+                                <div class="testimonial-name">Maria Santos</div>
+                                <div class="testimonial-location">Manila - Verified Purchase</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card testimonial-spacing">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Great quality product! The taste is much better than other brands I've tried. Delivery was fast too."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">J</div>
+                            <div>
+                                <div class="testimonial-name">Jose Mercado</div>
+                                <div class="testimonial-location">Cebu - Verified Purchase</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"I've lost weight and feel more energized since I started taking this. Love that it's made locally!"</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">L</div>
+                            <div>
+                                <div class="testimonial-name">Luisa Garcia</div>
+                                <div class="testimonial-location">Davao - Verified Purchase</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>You May Also Like</h2>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">💊</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Herbal Capsules</div>
+                        <h3 class="product-name">
+                            <a href="product-sambong.html">Sambong Capsules</a>
+                        </h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(1,842)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">₱280</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('sambong', 'Sambong Capsules', 280, 1)" title="Add to cart" aria-label="Add Sambong Capsules to cart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🌿</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Herbal Capsules</div>
+                        <h3 class="product-name">
+                            <a href="product-lagundi.html">Lagundi Leaves Capsules</a>
+                        </h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(1,567)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">₱295</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('lagundi', 'Lagundi Leaves Capsules', 295, 1)" title="Add to cart" aria-label="Add Lagundi Capsules to cart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🌾</div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Herbal Capsules</div>
+                        <h3 class="product-name">
+                            <a href="product-paragis.html">Paragis Capsules</a>
+                        </h3>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(1,324)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">₱270</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('paragis', 'Paragis Capsules', 270, 1)" title="Add to cart" aria-label="Add Paragis Capsules to cart">
+                                <i class="fas fa-cart-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">🌿</div>
+                        <span>Double M</span> Merchandise
+                    </div>
+                    <p>Your trusted source for premium Filipino herbal health products.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=100064211281084" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="YouTube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="mailto:info@doublem.ph"><i class="fas fa-envelope"></i> info@doublem.ph</a></li>
+                        <li><a href="tel:+639123456789"><i class="fas fa-phone"></i> +63 912 345 6789</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Taringsing, Cordon, Isabela 3312</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Double M Merchandise. All rights reserved.</p>
+                <div class="footer-payments">
+                    <span>We Accept:</span>
+                    <span class="payment-icon">GCASH</span>
+                    <span class="payment-icon">COD</span>
+                    <span class="payment-icon">Bank Transfer</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" title="Back to top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+        function switchTab(event, tabId) {
+            // Remove active from all headers and contents
+            document.querySelectorAll('.tab-header').forEach(h => h.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            // Add active to clicked header and corresponding content
+            event.target.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        function increaseQty() {
+            const qtyInput = document.getElementById('quantity');
+            if (parseInt(qtyInput.value) < 99) {
+                qtyInput.value = parseInt(qtyInput.value) + 1;
+            }
+        }
+
+        function decreaseQty() {
+            const qtyInput = document.getElementById('quantity');
+            if (parseInt(qtyInput.value) > 1) {
+                qtyInput.value = parseInt(qtyInput.value) - 1;
+            }
+        }
+
+        function addToCartFromDetail() {
+            const qty = parseInt(document.getElementById('quantity').value);
+            addToCart('apple-cider', 'Apple Cider with Herbs', 350, qty);
+        }
+
+        function buyNow() {
+            addToCartFromDetail();
+            setTimeout(() => {
+                window.location.href = 'cart.html';
+            }, 300);
+        }
+    </script>
+</body>
+</html>

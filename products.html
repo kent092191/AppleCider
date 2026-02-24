@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our complete range of premium Filipino herbal products - Apple Cider with Herbs, Sambong, Lagundi, and Paragis capsules">
+    <title>All Products - Double M Merchandise</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        🎉 Free shipping on orders over ₱1,500 | Use code <a href="#" onclick="applyCoupon('WELCOME10'); return false;">WELCOME10</a> for 10% off your first order
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🌿</div>
+                <span>Double M</span> Merchandise
+            </a>
+
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="nav-icon-btn" id="searchBtn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <a href="cart.html" class="nav-icon-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb breadcrumb-bg">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Products</span>
+        </div>
+    </div>
+
+    <!-- Page Hero -->
+    <section class="page-hero page-hero-compact">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Discover premium Filipino herbal health solutions for natural wellness</p>
+        </div>
+    </section>
+
+    <!-- Categories Bar -->
+   <section class="categories-bar">
+        <div class="container">
+            <div class="categories-scroll">
+                <a href="products.html?category=all" class="category-chip active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    All Products
+                </a>
+                <a href="products.html?category=apple-cider" class="category-chip" data-filter="apple-cider">
+                    <i class="fas fa-apple-alt"></i>
+                    Apple Cider
+                </a>
+                <a href="products.html?category=capsules" class="category-chip" data-filter="capsules">
+                    <i class="fas fa-pills"></i>
+                    Herbal Capsules
+                </a>
+                <a href="products.html?category=bestsellers" class="category-chip" data-filter="bestseller">
+                    <i class="fas fa-star"></i>
+                    Best Sellers
+                </a>
+                <a href="products.html?category=new" class="category-chip" data-filter="new">
+                    <i class="fas fa-sparkles"></i>
+                    New Arrivals
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Apple Cider with Herbs -->
+                <div class="product-card" data-category="apple-cider" data-badge="bestseller">
+                    <div class="product-badge bestseller">Bestseller</div>
+                    <div class="product-image">
+                        <img src="images/apple-cider.png" alt="ANJUBI Apple Cider Gold" class="product-img">
+                        <div class="product-quick-actions">
+                            <button class="quick-action-btn" aria-label="Quick View" onclick="quickView('apple-cider')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="quick-action-btn" aria-label="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Apple Cider Vinegar</div>
+                        <h3 class="product-name">
+                            <a href="product-apple-cider.html">Apple Cider with Herbs</a>
+                        </h3>
+                        <p class="product-desc">Premium apple cider vinegar infused with traditional Filipino herbs for digestive health and overall wellness support</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(2,458 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">₱350</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('apple-cider', 'Apple Cider with Herbs', 350, 1)">
+                                <i class="fas fa-cart-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sambong Capsules -->
+                <div class="product-card" data-category="capsules" data-badge="new">
+                    <div class="product-badge new">New</div>
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">💊</div>
+                        </div>
+                        <div class="product-quick-actions">
+                            <button class="quick-action-btn" aria-label="Quick View" onclick="quickView('sambong')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="quick-action-btn" aria-label="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Herbal Capsules</div>
+                        <h3 class="product-name">
+                            <a href="product-sambong.html">Sambong Capsules</a>
+                        </h3>
+                        <p class="product-desc">Natural kidney and urinary tract support with pure Sambong extract in convenient capsule form for daily wellness</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(1,842 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">₱280</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('sambong', 'Sambong Capsules', 280, 1)">
+                                <i class="fas fa-cart-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lagundi Capsules -->
+                <div class="product-card" data-category="capsules" data-badge="bestseller">
+                    <div class="product-badge bestseller">Bestseller</div>
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🌿</div>
+                        </div>
+                        <div class="product-quick-actions">
+                            <button class="quick-action-btn" aria-label="Quick View" onclick="quickView('lagundi')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="quick-action-btn" aria-label="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Herbal Capsules</div>
+                        <h3 class="product-name">
+                            <a href="product-lagundi.html">Lagundi Leaves Capsules</a>
+                        </h3>
+                        <p class="product-desc">Traditional remedy for cough, asthma, and respiratory health with pure Lagundi leaf extract capsules</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(1,567 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">₱295</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('lagundi', 'Lagundi Leaves Capsules', 295, 1)">
+                                <i class="fas fa-cart-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paragis Capsules -->
+                <div class="product-card" data-category="capsules" data-badge="">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">🌾</div>
+                        </div>
+                        <div class="product-quick-actions">
+                            <button class="quick-action-btn" aria-label="Quick View" onclick="quickView('paragis')">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="quick-action-btn" aria-label="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Herbal Capsules</div>
+                        <h3 class="product-name">
+                            <a href="product-paragis.html">Paragis Capsules</a>
+                        </h3>
+                        <p class="product-desc">Natural antioxidant support and overall wellness with traditional Paragis grass extract for daily health</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(1,324 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">₱270</div>
+                            <button class="add-to-cart-btn" onclick="addToCart('paragis', 'Paragis Capsules', 270, 1)">
+                                <i class="fas fa-cart-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bundle Offer -->
+                <div class="product-card" data-category="apple-cider capsules" data-badge="sale">
+                    <div class="product-badge sale">Save 15%</div>
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <div class="placeholder-icon">📦</div>
+                        </div>
+                        <div class="product-quick-actions">
+                            <button class="quick-action-btn" aria-label="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="quick-action-btn" aria-label="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Bundle Deal</div>
+                        <h3 class="product-name">
+                            <a href="#">Complete Wellness Bundle</a>
+                        </h3>
+                        <p class="product-desc">Get all 4 products at a special price - Apple Cider, Sambong, Lagundi, and Paragis capsules</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(856 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                ₱1,020
+                                <span class="old-price">₱1,195</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('bundle', 'Complete Wellness Bundle', 1020, 1)">
+                                <i class="fas fa-cart-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Apple Cider 3-Pack -->
+                <div class="product-card" data-category="apple-cider" data-badge="sale">
+                    <div class="product-badge sale">Save 20%</div>
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <img src="images/apple-cider.png" alt="Apple Cider 3-Pack" class="product-img">
+                        </div>
+                        <div class="product-quick-actions">
+                            <button class="quick-action-btn" aria-label="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="quick-action-btn" aria-label="Add to Wishlist">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Value Pack</div>
+                        <h3 class="product-name">
+                            <a href="#">Apple Cider 3-Month Supply</a>
+                        </h3>
+                        <p class="product-desc">Save big with our 3-bottle pack of Apple Cider with Herbs - perfect for consistent wellness routine</p>
+                        <div class="product-rating">
+                            <div class="stars">★★★★★</div>
+                            <span class="rating-count">(1,234 reviews)</span>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-price">
+                                ₱840
+                                <span class="old-price">₱1,050</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('apple-cider-3pack', 'Apple Cider 3-Pack', 840, 1)">
+                                <i class="fas fa-cart-plus"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div id="noResults" class="no-results-container">
+                <i class="fas fa-search no-results-icon"></i>
+                <h3>No products found</h3>
+                <p class="color-medium">Try adjusting your filter selection</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="trust-text">
+                        <strong>Secure Payment</strong>
+                        <span>100% Protected</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="trust-text">
+                        <strong>Free Shipping</strong>
+                        <span>Orders over ₱1,500</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <div class="trust-text">
+                        <strong>Easy Returns</strong>
+                        <span>30-Day Guarantee</span>
+                    </div>
+                </div>
+                <div class="trust-item">
+                    <div class="trust-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="trust-text">
+                        <strong>24/7 Support</strong>
+                        <span>Dedicated Service</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">🌿</div>
+                        <span>Double M</span> Merchandise
+                    </div>
+                    <p>Your trusted source for premium Filipino herbal health products. Natural wellness solutions backed by tradition and quality.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=100064211281084" target="_blank" rel="noopener" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">All Products</a></li>
+                        <li><a href="products.html?category=bestsellers">Best Sellers</a></li>
+                        <li><a href="products.html?category=new">New Arrivals</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><a href="mailto:info@doublem.ph"><i class="fas fa-envelope"></i> info@doublem.ph</a></li>
+                        <li><a href="tel:+639123456789"><i class="fas fa-phone"></i> +63 912 345 6789</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Taringsing, Cordon, Isabela 3312</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Double M Merchandise. All rights reserved. Made with 💚 in the Philippines</p>
+                <div class="footer-payments">
+                    <span>We Accept:</span>
+                    <span class="payment-icon">GCASH</span>
+                    <span class="payment-icon">COD</span>
+                    <span class="payment-icon">Bank Transfer</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-box">
+            <input type="text" placeholder="Search products..." id="searchInput">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your order - Secure checkout for your herbal health products">
+    <title>Checkout - Double M Merchandise</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">🌿</div>
+                <span>Double M</span> Merchandise
+            </a>
+            <div style="font-size: 1.2rem; color: var(--text-medium);">
+                <i class="fas fa-lock" style="color: var(--primary);"></i> Secure Checkout
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb" style="background: var(--bg-light);">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="cart.html">Cart</a>
+            <span>/</span>
+            <span>Checkout</span>
+        </div>
+    </div>
+
+    <!-- Checkout Page -->
+    <section class="checkout-page">
+        <div class="container">
+            <h1 style="margin-bottom: 40px;">Checkout</h1>
+
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <div>
+                    <!-- Contact Information -->
+                    <div class="checkout-form-section">
+                        <h3><i class="fas fa-user"></i> Contact Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>First Name <span class="required">*</span></label>
+                                <input type="text" id="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Last Name <span class="required">*</span></label>
+                                <input type="text" id="lastName" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Email <span class="required">*</span></label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Phone Number <span class="required">*</span></label>
+                                <input type="tel" id="phone" placeholder="+63 912 345 6789" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Address -->
+                    <div class="checkout-form-section">
+                        <h3><i class="fas fa-map-marker-alt"></i> Shipping Address</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Street Address <span class="required">*</span></label>
+                                <input type="text" id="address" placeholder="House No., Street Name" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Barangay <span class="required">*</span></label>
+                                <input type="text" id="barangay" required>
+                            </div>
+                            <div class="form-group">
+                                <label>City/Municipality <span class="required">*</span></label>
+                                <input type="text" id="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Province <span class="required">*</span></label>
+                                <input type="text" id="province" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Zip Code <span class="required">*</span></label>
+                                <input type="text" id="zipCode" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Region <span class="required">*</span></label>
+                                <select id="region" required>
+                                    <option value="">Select Region</option>
+                                    <option value="NCR">NCR - National Capital Region</option>
+                                    <option value="CAR">CAR - Cordillera Administrative Region</option>
+                                    <option value="Region I">Region I - Ilocos Region</option>
+                                    <option value="Region II">Region II - Cagayan Valley</option>
+                                    <option value="Region III">Region III - Central Luzon</option>
+                                    <option value="Region IV-A">Region IV-A - CALABARZON</option>
+                                    <option value="Region IV-B">Region IV-B - MIMAROPA</option>
+                                    <option value="Region V">Region V - Bicol Region</option>
+                                    <option value="Region VI">Region VI - Western Visayas</option>
+                                    <option value="Region VII">Region VII - Central Visayas</option>
+                                    <option value="Region VIII">Region VIII - Eastern Visayas</option>
+                                    <option value="Region IX">Region IX - Zamboanga Peninsula</option>
+                                    <option value="Region X">Region X - Northern Mindanao</option>
+                                    <option value="Region XI">Region XI - Davao Region</option>
+                                    <option value="Region XII">Region XII - SOCCSKSARGEN</option>
+                                    <option value="Region XIII">Region XIII - Caraga</option>
+                                    <option value="BARMM">BARMM - Bangsamoro Autonomous Region</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Options -->
+                    <div class="checkout-form-section">
+                        <h3><i class="fas fa-truck"></i> Delivery Method</h3>
+                        <div class="delivery-options">
+                            <div class="delivery-option selected" onclick="selectDelivery(this, 'standard', 0)">
+                                <div class="delivery-option-left">
+                                    <input type="radio" name="delivery" value="standard" checked>
+                                    <label>
+                                        <strong>Standard Delivery</strong><br>
+                                        <span style="font-size: 0.85rem; color: var(--text-light);">3-5 business days</span>
+                                    </label>
+                                </div>
+                                <div class="delivery-price">FREE</div>
+                            </div>
+                            <div class="delivery-option" onclick="selectDelivery(this, 'express', 150)">
+                                <div class="delivery-option-left">
+                                    <input type="radio" name="delivery" value="express">
+                                    <label>
+                                        <strong>Express Delivery</strong><br>
+                                        <span style="font-size: 0.85rem; color: var(--text-light);">1-2 business days</span>
+                                    </label>
+                                </div>
+                                <div class="delivery-price">₱150</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="checkout-form-section">
+                        <h3><i class="fas fa-credit-card"></i> Payment Method</h3>
+                        <div class="payment-methods">
+                            <div class="payment-option selected" onclick="selectPayment(this, 'cod')">
+                                <input type="radio" name="payment" value="cod" checked>
+                                <label><i class="fas fa-money-bill-wave"></i> Cash on Delivery (COD)</label>
+                            </div>
+                            <div class="payment-option" onclick="selectPayment(this, 'gcash')">
+                                <input type="radio" name="payment" value="gcash">
+                                <label><i class="fas fa-mobile-alt"></i> GCash</label>
+                            </div>
+                            <div class="payment-option" onclick="selectPayment(this, 'bank')">
+                                <input type="radio" name="payment" value="bank">
+                                <label><i class="fas fa-university"></i> Bank Transfer</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="checkout-order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="checkoutItems">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                    
+                    <div style="margin: 20px 0; padding: 16px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="checkoutSubtotal">₱0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span id="checkoutShipping">FREE</span>
+                        </div>
+                        <div class="summary-row" id="discountRow" style="display: none; color: var(--primary);">
+                            <span>Discount</span>
+                            <span id="checkoutDiscount">-₱0</span>
+                        </div>
+                    </div>
+
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span class="price" id="checkoutTotal">₱0</span>
+                    </div>
+
+                    <button class="btn btn-primary btn-lg" onclick="placeOrder()" style="margin-top: 24px;">
+                        <i class="fas fa-check-circle"></i>
+                        Place Order
+                    </button>
+
+                    <div style="margin-top: 16px; text-align: center;">
+                        <p style="font-size: 0.8rem; color: var(--text-light);">
+                            <i class="fas fa-lock"></i> Secure checkout - Your information is protected
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="padding: 24px 0; border-top: none;">
+                <p>&copy; 2026 Double M Merchandise. All rights reserved.</p>
+                <div class="footer-payments">
+                    <span>We Accept:</span>
+                    <span class="payment-icon">GCASH</span>
+                    <span class="payment-icon">COD</span>
+                    <span class="payment-icon">Bank Transfer</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+        function selectDelivery(element, type, cost) {
+            document.querySelectorAll('.delivery-option').forEach(opt => {
+                opt.classList.remove('selected');
+                opt.querySelector('input').checked = false;
+            });
+            element.classList.add('selected');
+            element.querySelector('input').checked = true;
+            updateCheckoutTotals();
+        }
+
+        function selectPayment(element, type) {
+            document.querySelectorAll('.payment-option').forEach(opt => {
+                opt.classList.remove('selected');
+                opt.querySelector('input').checked = false;
+            });
+            element.classList.add('selected');
+            element.querySelector('input').checked = true;
+        }
+    </script>
+</body>
+</html>
